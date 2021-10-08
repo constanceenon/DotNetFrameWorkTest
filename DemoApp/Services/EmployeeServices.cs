@@ -109,7 +109,6 @@ namespace DemoApp.Services
                     ,[Address]
                     ,[PhotoFileName]
                      FROM [dbo].[Employee] 
-                     WHERE [EmployeeId] = @EmployeeId
                      ";
                 using (SqlCommand command = new SqlCommand(query, con))
                 {

@@ -19,6 +19,7 @@ namespace DemoApp.Controllers
             _employeeRepo = new EmployeeRepository(); 
         }
 
+        [Route("api/employee/CreateNewEmployee")]
         [HttpPost]
         public HttpResponseMessage CreateNewEmployee(Employee model)
         {
@@ -34,7 +35,7 @@ namespace DemoApp.Controllers
 
         }
 
-
+        [Route("api/employee/UpdateEmployee")]
         [HttpPut]
         public HttpResponseMessage UpdateEmployee(Employee model)
         {
@@ -52,6 +53,7 @@ namespace DemoApp.Controllers
 
         }
 
+        [Route("api/employee/getemployeee{id}")]
         [HttpGet]
         public HttpResponseMessage GetEmployee(int id)
         {
@@ -68,6 +70,7 @@ namespace DemoApp.Controllers
             }
 
         }
+        [Route("api/employee/DeleteEmployee{id}")]
         [HttpDelete]
         public HttpResponseMessage DeleteEmployee(int id)
         {
@@ -85,6 +88,7 @@ namespace DemoApp.Controllers
 
         }
 
+        [Route("api/employee/getallemployees")]
         [HttpGet]
         public HttpResponseMessage GetAllEmployees()
         {
